@@ -6,14 +6,16 @@ cwd = os.getcwd()
 print(__file__.replace('/cgi-bin/test.py', ''))
 fpath=__file__.replace('/cgi-bin/test.py', '')+"/data/"
 
-print(os.getcwd())
+fpath="../data/"
+
+print(fpath)
 fname=[]
 for f in glob.glob(fpath+'*.csv'):
     fname.append(int(os.path.splitext(os.path.basename(f))[0]))
 print(fname)
 n=0
 if len(fname):
-    n=max(fname)
+    n=max(fname)+1
 with open(fpath+str(n)+'.csv', 'w') as f:
     pass
 

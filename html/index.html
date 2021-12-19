@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>form</title>
+		<!--スクリプト読み込み-->
+		<link rel="stylesheet" href="../css/style.css" />
+        <script src="../js/button.js"></script>
+		<!--Icon-->
+		<link
+			rel="shortcut icon"
+			href="../image/F11icon32x32.ico"
+			type="image/vnd.microsoft.icon"
+		/>
+    </head>
+    <body>
+		<!--タイトル-->
+		<div class="TITLE">
+			<h1>
+				<img
+					src="../image/sangirogo.png"
+					class="button_school"
+					onclick="goClick1()"
+					alt="School image"
+					width="40"
+					height="40"
+				/>
+				高専生診断テスト
+				<img
+					src="../image/form.png"
+					class="button_home"
+					onclick="goClick2()"
+					alt="form image"
+					width="40"
+					height="40"
+				/>
+			</h1>
+		</div>
+
+        <h1>注意書き</h1>
+        <p>注意しなさい</p>
+        <form action="../cgi-bin/start.py" method="post">
+            <div class="contact">
+                <input class="contact-submit" type="submit" value="始める" />
+            </div>
+        </form>
+    </body>
+</html>

@@ -58,7 +58,7 @@ for key in form:
     value = form[key].value
 
 try :
-    fpath="data/"
+    fpath=__file__.replace('/cgi-bin/end.py', '')+"/data/"
     fname=[]
     for f in glob.glob(fpath+'*.csv'):
         fname.append(int(os.path.splitext(os.path.basename(f))[0]))
@@ -92,6 +92,7 @@ except:
             tr.append (vector[0])
         data = list(map(int,tr))
 
+data.append(int(value))
 Score=sum(data)
 
 print(html % (Score))

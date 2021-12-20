@@ -20,7 +20,7 @@ html="""
 </html>
 """
 try :
-    fpath="data/"
+    fpath=__file__.replace('/cgi-bin/start.py', '')+"/data/"
     fname=[]
     for f in glob.glob(fpath+'*.csv'):
         fname.append(int(os.path.splitext(os.path.basename(f))[0]))

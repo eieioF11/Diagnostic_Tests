@@ -2,12 +2,11 @@ import os
 import os
 import glob
 import csv
-import pathlib
 cwd = os.getcwd()
-print(cwd)
-fpath="../data/"
-p = pathlib.Path('../data')
-print(p)
+print(__file__.replace('/cgi-bin/test.py', ''))
+fpath=__file__.replace('/cgi-bin/test.py', '')+"/data/"
+
+print(os.getcwd())
 fname=[]
 for f in glob.glob(fpath+'*.csv'):
     fname.append(int(os.path.splitext(os.path.basename(f))[0]))

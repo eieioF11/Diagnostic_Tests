@@ -23,7 +23,7 @@ for key in form:
     value = form[key].value
 
 try :
-    fpath="data/"
+    fpath=__file__.replace('/cgi-bin/form.py', '')+"/data/"
     fname=[]
     for f in glob.glob(fpath+'*.csv'):
         fname.append(int(os.path.splitext(os.path.basename(f))[0]))

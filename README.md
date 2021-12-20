@@ -1,6 +1,6 @@
 # Diagnostic_Tests
 ネットワーク課題用リポジトリ
-
+[サイト](http:/)
 ## cgiのテスト方法
 server.pyのあるディレクトリに移動し，以下のコマンドを実行する．
 ```bush

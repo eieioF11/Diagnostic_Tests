@@ -76,7 +76,7 @@ try :
         data = list(map(int,tr))
 
 except:
-    fpath=os.getcwd()+"/data/"
+    fpath="../data/"
     fname=[]
     for f in glob.glob(fpath+'*.csv'):
         fname.append(int(os.path.splitext(os.path.basename(f))[0]))

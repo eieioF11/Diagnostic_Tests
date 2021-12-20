@@ -4,11 +4,11 @@ import glob
 import csv
 cwd = os.getcwd()
 print(cwd)
-fpath=os.getcwd()+"\data\ "
+fpath="../data/"
 fname=[]
 for f in glob.glob(fpath+'*.csv'):
     fname.append(int(os.path.splitext(os.path.basename(f))[0]))
-#print(fname)
+print(fname)
 n=0
 if len(fname):
     n=max(fname)

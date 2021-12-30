@@ -45,7 +45,7 @@ try :
         writer.writerow(value)
 
 except:
-    fpath=os.getcwd()+"/data/"
+    fpath=__file__.replace('/cgi-bin/form.py', '')+"/data/"
     fname=[]
     for f in glob.glob(fpath+'*.csv'):
         fname.append(int(os.path.splitext(os.path.basename(f))[0]))
@@ -64,7 +64,7 @@ except:
 
     with open(fpath+str(n)+'.csv', 'a') as f:
         writer = csv.writer(f)
-        writer.writerow(form)
+        writer.writerow(value)
 
 dlen=len(data)+1
 

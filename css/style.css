@@ -115,3 +115,42 @@ p {
     text-align: center;
     font-size: 24px;
 }
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100);
+label {
+    font-weight: 100;
+    margin: 20px;
+    display: inline-block;
+    font-size: 35px;
+    width: 90px;
+    line-height: 90px;
+    text-align: center;
+    color: #222;
+    border: 1px solid #999;
+    background: #FFF;
+    border-radius: 50%;
+    box-shadow: 0 0 0 45px #FFF inset;
+    transition: 200ms all;
+    cursor: pointer;
+}
+input
+{
+    display: none;
+}
+input[class="male"]:checked + label {
+    box-shadow: 0 0 0 -1px #FFF inset;
+    color: #FFF;
+    background: #3441b6;
+    border-color: #3441b6;
+}
+
+input[class="female"]:checked + label {
+    box-shadow: 0 0 0 -1px #FFF inset;
+    color: #FFF;
+    background: #b63434;
+    border-color: #b63434;
+}
+
+.sex{
+    text-align:center;
+}

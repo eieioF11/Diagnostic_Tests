@@ -13,7 +13,7 @@ html="""
     <head>
         <title>処理</title>
     </head>
-    <body onLoad=setTimeout(\"location.href=\'../html/index%s.html\'\",500)>
+    <body onLoad=setTimeout(\"location.href=\'../html/index%s%s.html\'\",500)>
         <p>ロード中</p>
         <p> %s </p>
     </body>
@@ -21,6 +21,8 @@ html="""
 """
 for key in form:
     value = form[key].value
+
+sex=""
 
 try :
     fpath=os.getcwd()+"\data\ "
@@ -41,6 +43,7 @@ try :
                 v=int(vector[0])
             except:
                 v=None
+                sex=str(vector[0])
             if v!=None:
                 tr.append (vector[0])
         data = list(map(int,tr))
@@ -50,7 +53,7 @@ try :
         writer.writerow(value)
 
 except:
-    fpath=__file__.replace('/cgi-bin/form.py', '')+"/data/"
+    fpath=__file__.replace('/cgi-bin/form_branch.py', '')+"/data/"
     fname=[]
     for f in glob.glob(fpath+'*.csv'):
         fname.append(int(os.path.splitext(os.path.basename(f))[0]))
@@ -68,6 +71,7 @@ except:
                 v=int(vector[0])
             except:
                 v=None
+                sex=str(vector[0])
             if v!=None:
                 tr.append (vector[0])
         data = list(map(int,tr))
@@ -78,4 +82,4 @@ except:
 
 dlen=len(data)+1
 
-print(html % (dlen,value))
+print(html % (dlen,sex,value))

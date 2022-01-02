@@ -72,7 +72,12 @@ try :
         crow=[row for row in reader]
         tr=[]
         for vector in crow:
-            tr.append (vector[0])
+            try:
+                v=int(vector[0])
+            except:
+                v=None
+            if v!=None:
+                tr.append (vector[0])
         data = list(map(int,tr))
 except:
     fpath=__file__.replace('/cgi-bin/end.py', '')+"/data/"
@@ -89,7 +94,12 @@ except:
         crow=[row for row in reader]
         tr=[]
         for vector in crow:
-            tr.append (vector[0])
+            try:
+                v=int(vector[0])
+            except:
+                v=None
+            if v!=None:
+                tr.append (vector[0])
         data = list(map(int,tr))
 
 data.append(int(value))

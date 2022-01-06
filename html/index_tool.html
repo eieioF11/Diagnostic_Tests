@@ -17,10 +17,10 @@
 		<div class="TITLE">
 			<h1>
 				<img
-					src="../image/sangirogo.png"
-					class="button_school"
-					onclick="goClick1()"
-					alt="School image"
+					src="../image/homeicon.jpeg"
+					class="button_home"
+					onclick="goClick0()"
+					alt="home image"
 					width="40"
 					height="40"
 				/>
@@ -36,12 +36,17 @@
 			</h1>
 		</div>
 
-        <h1>注意書き</h1>
-        <p>注意しなさい</p>
-        <div class="contact">
-			<form action="../cgi-bin/jamp.py">
-            <input class="contact-submit" type="submit" value="始める"/>
-			</form>
-        </div>
+        <h1>管理ツール</h1>
+        <p>扱いには注意しなさい</p>
+        <form action="../cgi-bin/show.py" method="post">
+            <div class="contact">
+                <input class="contact-submit" type="submit" value="保存されているデータ表示" />
+            </div>
+        </form>
+        <form action="../cgi-bin/delete.py" method="post">
+            <div class="contact">
+                <input class="contact-submit" type="submit" value="データの削除" />
+            </div>
+        </form>
     </body>
 </html>

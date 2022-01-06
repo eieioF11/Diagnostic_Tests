@@ -57,6 +57,8 @@ html="""
 for key in form:
     value = form[key].value
 
+sex="m"
+
 try :
     fpath=os.getcwd()+"\data\ "
     fname=[]
@@ -75,6 +77,7 @@ try :
             try:
                 v=int(vector[0])
             except:
+                sex=str(vector[0])
                 v=None
             if v!=None:
                 tr.append (vector[0])
@@ -97,6 +100,7 @@ except:
             try:
                 v=int(vector[0])
             except:
+                sex=str(vector[0])
                 v=None
             if v!=None:
                 tr.append (vector[0])
@@ -104,5 +108,11 @@ except:
 
 data.append(int(value))
 Score=sum(data)
+try:
+    with open(fpath+"Statistics/data.csv", 'a') as f:
+        writer = csv.writer(f)
+        writer.writerow([sex,Score])
+except:
+    pass
 
 print(html % (Score))

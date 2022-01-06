@@ -26,10 +26,10 @@
 				/>
 				高専生診断テスト
 				<img
-					src="../image/homeicon.jpeg"
+					src="../image/form.png"
 					class="button_home"
-					onclick="goClick0()"
-					alt="home image"
+					onclick="goClick2()"
+					alt="form image"
 					width="40"
 					height="40"
 				/>
@@ -37,11 +37,11 @@
 		</div>
 
         <h1>注意書き</h1>
-        <p>注意しなさい ver2</p>
-        <div class="contact">
-			<form action="../cgi-bin/jamp.py">
-            <input class="contact-submit" type="submit" value="始める"/>
-			</form>
-        </div>
+        <p>注意しなさい</p>
+        <form action="../cgi-bin/start.py" method="post">
+            <div class="contact">
+                <input class="contact-submit" type="submit" value="始める" />
+            </div>
+        </form>
     </body>
 </html>

@@ -10,10 +10,10 @@ function goClick1() {
 
 function goClick2() {
     // クリック時の動作を指定できます
-    location.href = "../html/index_form.html";//homeに移動
+    location.href = "../html/index_form.html";//formに移動
 }
 
 function goClick3() {
     // クリック時の動作を指定できます
-    location.href = "../html/index_tool.html";//homeに移動
+    location.href = "../html/index_tool.html";//toolに移動
 }

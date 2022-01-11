@@ -61,13 +61,14 @@ html="""
         <img src='../data/Statistics/hist.png' style="display: block; margin: auto;">
         <p>平均高専生度</p>
         <p> %s </p>
+        <p> 最大 %s 最小 %s</p>
         <p>男女比</p>
         <p> 男性 %s人 女性%s人</p>
     </body>
 </html>
 """
 try :
-    fpath=os.getcwd()+"\data\Statistics\ "
+    fpath=os.getcwd()+"\\data\\Statistics\\"
     df = pd.read_csv(fpath+'data.csv',names=['sex', 'score'])
 except:
     fpath=__file__.replace('/cgi-bin/Statistics.py', '')+"/data/Statistics/"
@@ -77,9 +78,11 @@ except:
 plt.hist(df['score'].tolist(), bins=16)
 plt.savefig(fpath+'hist.png')
 mean=float(df.mean())
+max=float(df['score'].max())
+min=float(df['score'].min())
 df_m = (df["sex"] == 'm')
 df_f = (df["sex"] == 'f')
 m=df_m.sum()
 f=df_f.sum()
 
-print(html % (len(df),mean,m,f))
+print(html % (len(df),mean,max,min,m,f))

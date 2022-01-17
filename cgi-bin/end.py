@@ -54,6 +54,13 @@ html="""
 </html>
 
 """
+ip=0
+iptext=""
+if "REMOTE_ADDR" in os.environ:
+    iptext=os.environ["REMOTE_ADDR"]
+    iptext=iptext.split('.')
+    ip=int(iptext[3])
+
 for key in form:
     value = form[key].value
 
@@ -61,15 +68,15 @@ sex="m"
 
 try :
     fpath=os.getcwd()+"\data\ "
-    fname=[]
-    for f in glob.glob(fpath+'*.csv'):
-        fname.append(int(os.path.splitext(os.path.basename(f))[0]))
-    #print(fname)
-    n=0
-    if len(fname):
-        n=max(fname)
+    #fname=[]
+    #for f in glob.glob(fpath+'*.csv'):
+    #    fname.append(int(os.path.splitext(os.path.basename(f))[0]))
+    ##print(fname)
+    #n=0
+    #if len(fname):
+    #    n=max(fname)
 
-    with open(fpath+str(n)+'.csv','r') as f:
+    with open(fpath+str(ip)+'.csv','r') as f:
         reader = csv.reader(f)
         crow=[row for row in reader]
         tr=[]
@@ -84,15 +91,15 @@ try :
         data = list(map(int,tr))
 except:
     fpath=__file__.replace('/cgi-bin/end.py', '')+"/data/"
-    fname=[]
-    for f in glob.glob(fpath+'*.csv'):
-        fname.append(int(os.path.splitext(os.path.basename(f))[0]))
-    #print(fname)
-    n=0
-    if len(fname):
-        n=max(fname)
+    #fname=[]
+    #for f in glob.glob(fpath+'*.csv'):
+    #    fname.append(int(os.path.splitext(os.path.basename(f))[0]))
+    ##print(fname)
+    #n=0
+    #if len(fname):
+    #    n=max(fname)
 
-    with open(fpath+str(n)+'.csv', 'r') as f:
+    with open(fpath+str(ip)+'.csv', 'r') as f:
         reader = csv.reader(f)
         crow=[row for row in reader]
         tr=[]

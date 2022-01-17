@@ -19,6 +19,13 @@ html="""
     </body>
 </html>
 """
+ip=0
+iptext=""
+if "REMOTE_ADDR" in os.environ:
+    iptext=os.environ["REMOTE_ADDR"]
+    iptext=iptext.split('.')
+    ip=int(iptext[3])
+
 for key in form:
     value = form[key].value
 
@@ -26,15 +33,15 @@ sex=""
 
 try :
     fpath=os.getcwd()+"\data\ "
-    fname=[]
-    for f in glob.glob(fpath+'*.csv'):
-        fname.append(int(os.path.splitext(os.path.basename(f))[0]))
-    #print(fname)
-    n=0
-    if len(fname):
-        n=max(fname)
+    #fname=[]
+    #for f in glob.glob(fpath+'*.csv'):
+    #    fname.append(int(os.path.splitext(os.path.basename(f))[0]))
+    ##print(fname)
+    #n=0
+    #if len(fname):
+    #    n=max(fname)
 
-    with open(fpath+str(n)+'.csv','r') as f:
+    with open(fpath+str(ip)+'.csv', 'r') as f:
         reader = csv.reader(f)
         crow=[row for row in reader]
         tr=[]
@@ -48,21 +55,21 @@ try :
                 tr.append (vector[0])
         data = list(map(int,tr))
 
-    with open(fpath+str(n)+'.csv', 'a' ,newline='') as f:
+    with open(fpath+str(ip)+'.csv', 'a' ,newline='') as f:
         writer = csv.writer(f)
         writer.writerow(value)
 
 except:
     fpath=__file__.replace('/cgi-bin/form_branch.py', '')+"/data/"
-    fname=[]
-    for f in glob.glob(fpath+'*.csv'):
-        fname.append(int(os.path.splitext(os.path.basename(f))[0]))
-    #print(fname)
-    n=0
-    if len(fname):
-        n=max(fname)
+    #fname=[]
+    #for f in glob.glob(fpath+'*.csv'):
+    #    fname.append(int(os.path.splitext(os.path.basename(f))[0]))
+    ##print(fname)
+    #n=0
+    #if len(fname):
+    #    n=max(fname)
 
-    with open(fpath+str(n)+'.csv', 'r') as f:
+    with open(fpath+str(ip)+'.csv', 'r') as f:
         reader = csv.reader(f)
         crow=[row for row in reader]
         tr=[]
@@ -76,7 +83,7 @@ except:
                 tr.append (vector[0])
         data = list(map(int,tr))
 
-    with open(fpath+str(n)+'.csv', 'a') as f:
+    with open(fpath+str(ip)+'.csv', 'a') as f:
         writer = csv.writer(f)
         writer.writerow(value)
 

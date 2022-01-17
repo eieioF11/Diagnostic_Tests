@@ -14,6 +14,6 @@ text=""
 for key in form:
     value = form[key].value
     print("<p> %s: %s </p>" % (key, value))
-    text=str(key)+":"+str(value)
+    text+=str(key)+":"+str(value)+"\n\r"
 bot.send(message=text)
 print("</body></html>")

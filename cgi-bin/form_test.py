@@ -17,14 +17,34 @@ print("<h1>Pythonにform</h1>")
 for key in form:
     value = form[key].value
     print("<p> %s: %s </p>" % (key, value))
-
-name=form["名前"].value
-sex=form["性別"].value
-skil=form["スキル"].value
-Business=form["職業"].value
-val=form["問い合わせ"].value
-mail=form["メール"].value
-pnum=form["電話"].value
+try:
+    name=form["名前"].value
+except:
+    name=""
+try:
+    sex=form["性別"].value
+except:
+    sex=""
+try:
+    skil=form["スキル"].value
+except:
+    skil=""
+try:
+    Business=form["職業"].value
+except:
+    Business=""
+try:
+    val=form["問い合わせ"].value
+except:
+    val=""
+try:
+    mail=form["メール"].value
+except:
+    mail=""
+try:
+    pnum=form["電話"].value
+except:
+    pnum=""
 text="""
 お問い合わせ
 お名前 %s

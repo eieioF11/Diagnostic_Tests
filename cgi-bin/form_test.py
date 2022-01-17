@@ -15,7 +15,6 @@ for key in form:
     value = form[key].value
     print("<p> %s: %s </p>" % (key, value))
     text=stl(key)+":"+stl(value)
-print("</body></html>")
-
 bot = LINENotifyBot(access_token='l0xllBCP6WC4QiI0HThc4zQKZFrDU22bDmiXTO0CVAM')
 bot.send(message=text)
+print("</body></html>")

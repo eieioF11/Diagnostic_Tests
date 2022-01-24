@@ -14,7 +14,7 @@ html="""
         <meta charset='utf-8'>
         <title>form</title>
 		<!--スクリプト読み込み-->
-		<link rel="stylesheet" href="../css/style2.css" />
+		<link rel="stylesheet" href="../css/style_e.css" />
         <script src="../js/button.js"></script>
 		<!--Icon-->
 		<link
@@ -48,8 +48,15 @@ html="""
 		</div>
 		<h1>結果</h1>
 		<p>あなたの高専生度は</p>
-        <p> %s </p>
-
+        <p>
+            %s
+            <img src='../image/%s.png' style="display: block; margin: auto;">
+            %s
+        </p>
+        <h2>
+            参考
+            <img src='../image/診断結果.png' style="display: block; margin: auto;">
+        </h2>
     </body>
 </html>
 
@@ -122,4 +129,22 @@ try:
 except:
     pass
 
-print(html % (Score))
+im=1
+text="あなたは"
+if Score >= 81:
+    text+="プロ高専生です"
+    im=5
+elif Score >= 61:
+    text+="アマチュア高専生です"
+    im=4
+elif Score >= 41:
+    text+="高専入学一ヶ月の人です"
+    im=3
+elif Score >= 21:
+    text+="高専生向き一般人です"
+    im=2
+else:
+    text+="健全な一般人です"
+    im=1
+
+print(html % (Score,im,text))

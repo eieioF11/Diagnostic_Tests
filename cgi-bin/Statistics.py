@@ -55,14 +55,14 @@ html="""
 			</h1>
 		</div>
 		<h2>統計</h2>
-		<p>アクセス数</p>
+		<h3>アクセス数</h3>
         <p> %s </p>
-        <p>ヒストグラム</p>
+        <h3>ヒストグラム</h3>
         <img src='../data/Statistics/hist.png' style="display: block; margin: auto;">
-        <p>平均高専生度</p>
+        <h3>平均高専生度</h3>
         <p> %s </p>
         <p> 最大 %s 最小 %s</p>
-        <p>男女比</p>
+        <h3>男女比</h3>
         <p> 男性 %s人 女性%s人</p>
     </body>
 </html>

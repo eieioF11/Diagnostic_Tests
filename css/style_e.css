@@ -52,13 +52,13 @@ body {
     right      : 0;
     bottom     : 0;
     left       : 0;
-    background-image : url(../image/高専.png);  /* 使用する画像を指定 */
+    background-image : url(../image/結果.png);  /* 使用する画像を指定 */
     animation  : bgAnime 40s linear infinite;
 }
 @keyframes bgAnime {
     0% { background-position: 0 0 }
                 /* 使用する画像幅と画像高さのpxに変更ください */
-    100% { background-position: 1920px -1080px }
+    100% { background-position: 1920px -1080px  }
 }
 
 /* --- 前面の文字定義（サンプルのため変更してください） ----- */
@@ -75,23 +75,6 @@ body {
     font-size: 50px;
 }
 
-.contact-submit {
-    width: 250px;
-    background-color: #333;
-    color: #fff;
-    font-weight: bold;
-    display: block;
-    margin: 20px auto;
-    font-size: 16px;
-    padding: 15px;
-    border-radius: 100vh;
-    border: none;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    cursor: pointer;
-}
-
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
 fieldset {
@@ -101,109 +84,24 @@ fieldset {
     text-align: center;
 }
 
-
 h1 {
     margin: 0;
     line-height: 1.2;
-    text-align: center
-}
-
-h2 {
     text-align: center;
-    padding: 1rem 2rem;
-    color: #fff;
-    background: rgb(155, 60, 60);
-    -webkit-box-shadow: 5px 5px 0 #700000;
-    box-shadow: 5px 5px 0 #700000;
+    font-size: 50px;
 }
 
 p {
     margin: 0 0 1.6rem;
     padding-bottom: 0.2rem;
     border-bottom: 1px solid #ddd;
-    color: #a04d4d;
     text-align: center;
-    font-size: 24px;
+    font-size: 40px;
 }
 
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100);
-label {
-    font-weight: 100;
-    margin: 20px;
-    display: inline-block;
-    font-size: 35px;
-    width: 90px;
-    line-height: 90px;
+h2 {
+    margin: 0;
+    line-height: 1.2;
     text-align: center;
-    color: #222;
-    border: 1px solid #999;
-    background: #FFF;
-    border-radius: 50%;
-    box-shadow: 0 0 0 45px #FFF inset;
-    transition: 200ms all;
-    cursor: pointer;
-}
-input
-{
-    display: none;
-}
-input[class="male"]:checked + label {
-    box-shadow: 0 0 0 -1px #FFF inset;
-    color: #FFF;
-    background: #3441b6;
-    border-color: #3441b6;
-}
-
-input[class="female"]:checked + label {
-    box-shadow: 0 0 0 -1px #FFF inset;
-    color: #FFF;
-    background: #b63434;
-    border-color: #b63434;
-}
-
-.sex{
-    text-align:center;
-}
-
-
-
-.button-arrow-inner {
-    text-align: center;
-    box-sizing: border-box;
-    display: block;
-    border: 2px solid #447fff;
-    background: #fff;
-    color: #447fff;
-    font-weight: bold;
-    padding: 0.5em 2em 0.5em 1em;
-    line-height: 1.4;
-    max-width: 300px;
-    width: 100%;
-    margin: 0 auto;
-    position: relative;
-}
-.button-arrow-inner::after {
-    content: '';
-    width: 10px;
-    height: 10px;
-    display: block;
-    position: absolute;
-    top: 50%;
-    right: 12px;
-    margin-top: -6px;
-    transform: rotate(45deg);
-    border-top: 2px solid #447fff;
-    border-right: 2px solid #447fff;
-    transition: right 0.3s;
-}
-.button-arrow-inner:hover {
-    background: #447fff;
-    color: #fff;
-}
-.button-arrow-inner:hover::after {
-    border-color: #fff;
-    right: 7px;
-}
-.button-arrow-inner:active, .button-arrow-inner:focus {
-    opacity: 0.8;
+    font-size: 50px;
 }

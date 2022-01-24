@@ -52,13 +52,13 @@ body {
     right      : 0;
     bottom     : 0;
     left       : 0;
-    background-image : url(../image/DSC00907.JPG);  /* 使用する画像を指定 */
+    background-image : url(../image/高専.png);  /* 使用する画像を指定 */
     animation  : bgAnime 40s linear infinite;
 }
 @keyframes bgAnime {
     0% { background-position: 0 0 }
                 /* 使用する画像幅と画像高さのpxに変更ください */
-    100% { background-position: 1191px -805px }
+    100% { background-position: 1920px -1080px }
 }
 
 /* --- 前面の文字定義（サンプルのため変更してください） ----- */

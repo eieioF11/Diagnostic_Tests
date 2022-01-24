@@ -22,7 +22,7 @@ html="""
         <meta charset='utf-8'>
         <title>form</title>
 		<!--スクリプト読み込み-->
-		<link rel="stylesheet" href="../css/style2.css" />
+		<link rel="stylesheet" href="../css/style_s.css" />
         <script src="../js/button.js"></script>
 		<!--Icon-->
 		<link
@@ -54,7 +54,7 @@ html="""
 				/>
 			</h1>
 		</div>
-		<h1>統計</h1>
+		<h2>統計</h2>
 		<p>アクセス数</p>
         <p> %s </p>
         <p>ヒストグラム</p>
